@@ -2,12 +2,7 @@
 {
     public class NoteTag
     {
-        public NoteTag(string tag)
-        {
-            Tag = tag;
-        }
-
         public int Id { get; set; }
-        public string Tag { get; private set; }
+        public string Tag { get; set; }
     }
 }

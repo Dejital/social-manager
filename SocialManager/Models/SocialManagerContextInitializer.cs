@@ -23,13 +23,13 @@ namespace SocialManager.Models
 
             var noteTags = new List<NoteTag>()
             {
-                new NoteTag("Fashion enthusiast"),
-                new NoteTag("Dating Ross Geller"),
-                new NoteTag("Works as waitress"),
+                new NoteTag() {Tag = "Fashion enthusiast"},
+                new NoteTag() {Tag = "Dating Ross Geller"},
+                new NoteTag() {Tag = "Works as waitress"},
             };
 
             var notes = new List<Note>();
-            noteTags.ForEach(t => notes.Add(new Note() { NoteTag = t, Person = rachel, Meeting = meeting}));
+            noteTags.ForEach(t => notes.Add(new Note() { NoteTag = t, Person = rachel}));
 
             notes.ForEach(n => rachel.Notes.Add(n));
             rachel.Meetings.Add(meeting);
