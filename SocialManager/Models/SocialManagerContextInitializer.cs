@@ -17,19 +17,26 @@ namespace SocialManager.Models
                 new Person() {FirstName = "Chandler", LastName = "Bing"},
                 new Person() {FirstName = "Ross", LastName = "Geller"},
             };
-            context.People.AddRange(people);
-            context.SaveChanges();
-
             var rachel = people[0];
+
             var meeting = new Meeting() {MeetingDateTime = new DateTime(2015, 11, 3)};
-            var notes = new List<Note>()
+
+            var noteTags = new List<NoteTag>()
             {
-                new Note() {Name = "Fashion enthusiast"},
-                new Note() {Name = "Dating Ross Geller"},
-                new Note() {Name = "Works as waitress"},
+                new NoteTag("Fashion enthusiast"),
+                new NoteTag("Dating Ross Geller"),
+                new NoteTag("Works as waitress"),
             };
 
+            var notes = new List<Note>();
+            noteTags.ForEach(t => notes.Add(new Note() { NoteTag = t, Person = rachel, Meeting = meeting}));
+
+            notes.ForEach(n => rachel.Notes.Add(n));
+            rachel.Meetings.Add(meeting);
+
+            context.People.AddRange(people);
             context.Meetings.Add(meeting);
+            context.NoteTags.AddRange(noteTags);
             context.Notes.AddRange(notes);
             context.SaveChanges();
 

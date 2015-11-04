@@ -20,5 +20,7 @@ namespace SocialManager.Models
         public DbSet<Meeting> Meetings { get; set; }
 
         public DbSet<Note> Notes { get; set; }
+
+        public DbSet<NoteTag> NoteTags { get; set; }
     }
 }

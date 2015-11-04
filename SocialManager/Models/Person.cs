@@ -7,6 +7,7 @@ namespace SocialManager.Models
         public Person()
         {
             Meetings = new List<Meeting>();
+            Notes = new List<Note>();
         }
 
         public int Id { get; set; }

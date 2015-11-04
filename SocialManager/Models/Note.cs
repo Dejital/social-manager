@@ -3,6 +3,8 @@
     public class Note
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public NoteTag NoteTag { get; set; }
+        public Meeting Meeting { get; set; }
+        public Person Person { get; set; }
     }
 }

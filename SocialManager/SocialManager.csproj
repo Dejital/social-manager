@@ -202,6 +202,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MeetingsController.cs" />
     <Compile Include="Controllers\NotesController.cs" />
+    <Compile Include="Controllers\NoteTagsController.cs" />
     <Compile Include="Controllers\PeopleController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -212,6 +213,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Meeting.cs" />
     <Compile Include="Models\Note.cs" />
+    <Compile Include="Models\NoteTag.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\SocialManagerContext.cs" />
     <Compile Include="Models\SocialManagerContextInitializer.cs" />
